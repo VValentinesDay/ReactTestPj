@@ -3,7 +3,7 @@ import Button from "./Button/Button"
 import { ButtonTest } from "../../Data/arrayTest"
 
 
-export default function BlockOut(contentType) {
+export default function BlockOut() {
 
     const [contentType, setContentType]  = useState(null)
     
