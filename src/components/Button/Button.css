@@ -9,6 +9,10 @@
     background-color: rgb(249, 249, 249);
 }
 
+.button:disabled{
+    cursor: not-allowed;
+}
+
 .button:hover {
     opacity: 0.8;
 }

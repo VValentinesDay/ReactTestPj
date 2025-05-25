@@ -60,15 +60,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-header {
-  height: 50px;
-  display: flex;
-  padding: 0 2rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  background: #fafafa;
-}
 
 main {
   max-width: 850px;
@@ -93,6 +84,18 @@ img {
   width: 50%;
 }
 
+.centered{
+  text-align: center;
+}
+
+.inputStyle {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -104,4 +107,12 @@ img {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.control{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }

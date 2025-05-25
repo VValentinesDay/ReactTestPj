@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import photo1 from '/photo1.jpg'
+import photo1 from '../../../public/photo1.jpg'
+import './Header.module.css'
+// import {testData} from '../../Data/arrayTest'
 // import from '/App.css'
 
 const nowTime = new Date();
@@ -17,9 +19,6 @@ export default function Header()
     <img src={photo1} alt='' />
    
     <span>Текущее время: {timeState.toLocaleTimeString()} </span>
-    {/* {setTime()} */}
-    {/* <span>Текущее время: {nowTime.toLocaleTimeString()} </span> */}
-
 
   </header> )
 }
