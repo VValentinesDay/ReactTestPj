@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import "../index.css"
 // import Button from "../components/Button/Button"
 import Button from "./Button/Button"
@@ -6,6 +6,8 @@ import Button from "./Button/Button"
 
 
 function StateVsRef() {
+
+    const Input = useRef()
 
     const[textValue, setTextValue] = useState('nothing inside')
 
@@ -15,11 +17,18 @@ function StateVsRef() {
     }
 
 
+    const[show, setShow] = useState(false)
+    function handleShow(event){
+        if (event.key == 'Enter') {
+            setShow(true)
+        }
+    }
+
    return ( <div>
         <h3>
-            Input Value : {textValue}
+            Input Value : {show && textValue}
         </h3>
-        <input type="text" className="control" onChange={handleSpecialInput}>
+        <input type="text" className="control" onChange={handleSpecialInput} value={textValue} onKeyDown={handleShow}>
 
         </input>
     </div>)
