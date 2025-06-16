@@ -6,11 +6,12 @@ import IntroSection from './components/IntroSection';
 import TabSection from './components/TabSection';
 import FeedBackSection from './components/FeedBackSection';
 import { useState } from 'react';
+import EffectSection from './components/EffectSection';
 
 export default function App() {
   
   // Активное состояние - фидбэк
-const [tab, setTab] = useState('feedback')
+const [tab, setTab] = useState('effect')
 
   return (
     <>
@@ -28,7 +29,7 @@ const [tab, setTab] = useState('feedback')
         </>)}
 
         {tab == 'feedback' && <> <FeedBackSection></FeedBackSection>  </>} 
-
+        {tab == 'effect' && <EffectSection></EffectSection>}
 
  
       </main>

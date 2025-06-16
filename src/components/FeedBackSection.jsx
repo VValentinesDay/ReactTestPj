@@ -8,27 +8,21 @@ import Button from "./Button/Button"
 function StateVsRef() {
 
     const Input = useRef()
-
-    const[textValue, setTextValue] = useState('nothing inside')
-
-    function handleSpecialInput(event)
-    {
-        setTextValue(event.target.value)
-    }
+    const [show, setShow] = useState(false)
 
 
-    const[show, setShow] = useState(false)
     function handleShow(event){
         if (event.key == 'Enter') {
             setShow(true)
         }
     }
 
+    // input.current относится к своему дом-дереву
    return ( <div>
         <h3>
-            Input Value : {show && textValue}
+            Input Value : {show && Input.current.value}
         </h3>
-        <input type="text" className="control" onChange={handleSpecialInput} value={textValue} onKeyDown={handleShow}>
+        <input type="text" className="control" ref={Input} onKeyDown={handleShow}>
 
         </input>
     </div>)
